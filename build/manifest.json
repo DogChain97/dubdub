@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Trial Extension",
+  "version": "0.0.1",
+  "icons": {
+    "16": "favicon.ico",
+    "48": "logo192.png",
+   "128": "logo512.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "downloads"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Your Extension Name"
+  }
+}
